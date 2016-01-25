@@ -5,6 +5,12 @@
   # View the current working tree status using the short format
   s = status -s
 
+  # List contributors with number of commits
+  contributors = shortlog --summary --numbered
+
+  # Amend the currently staged files to the latest commit
+  amend = commit --amend --reuse-message=HEAD
+
   # Remove last commit
   rlc = reset --hard HEAD~1
 
