@@ -22,3 +22,10 @@
       git commit --amend --author \"$1 <$2>\" -C HEAD; \
     fi \
   }; f"
+
+  # Remove the tag with the specified tag name if
+  # exists and tag the latest commit with that name
+  retag = "!f() { \
+    git tag -d "$1" &> /dev/null; \
+    git tag $1; \
+  }; f"
