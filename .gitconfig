@@ -111,3 +111,11 @@
 
   # Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
+
+[help]
+  # Automatically correct and execute mistyped commands
+  autocorrect = 1
+
+[include]
+  # For username/github token/etc
+  path = ~/.gitconfig.local
