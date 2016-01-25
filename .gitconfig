@@ -60,3 +60,25 @@
   # Prevent showing files whose names contain non-ASCII symbols as unversioned.
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = false
+
+[color]
+  # Use colors in Git commands that are capable of colored output when
+  # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+  ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  commit = green bold
+  frag = magenta bold # line info
+  old = red           # deletions
+  new = green         # additions
+
+[color "status"]
+  added = green reverse
+  changed = yellow reverse
+  untracked = red reverse
