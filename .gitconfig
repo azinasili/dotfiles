@@ -9,7 +9,7 @@
   rlc = reset --hard HEAD~1
 
   # Undo last commit
-  rlc = reset --soft HEAD~1
+  ulc = reset --soft HEAD~1
 
   # Show verbose output about branches, tags, or remotes
   branches = branch -a
