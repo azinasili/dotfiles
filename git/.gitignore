@@ -1,0 +1,18 @@
+# OSX
+._*
+.AppleDouble
+.DS_Store
+.DS_Store?
+.localized
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+
+# Windows
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+
+# Linux
+*~
