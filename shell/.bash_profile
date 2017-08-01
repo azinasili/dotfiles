@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Load bash dotfiles
-# -------------------
 source_bash_files() {
   local file=''
   local i=''
@@ -29,5 +28,4 @@ unset -f source_bash_files
 
 # Clear system messages (e.g.: system copyright notice, the
 # date and time of the last login, the message of the day, etc.)
-# --------------------------------------------------------------
 clear
