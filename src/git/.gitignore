@@ -1,8 +1,13 @@
-# OSX
+# Useful `.gitignore` templates:
+# https://github.com/github/gitignore
+
+# Linux
+*~
+
+# macOS
 ._*
 .AppleDouble
 .DS_Store
-.DS_Store?
 .localized
 .LSOverride
 .Spotlight-V100
@@ -13,6 +18,3 @@ Icon
 Desktop.ini
 ehthumbs.db
 Thumbs.db
-
-# Linux
-*~
