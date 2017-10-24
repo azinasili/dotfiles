@@ -1,6 +1,9 @@
 [alias]
-  # View abbreviated SHA, description, and history graph of the latest 20 commits
-  l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  # View abbreviated SHA and description of the latest 20 commits
+  l = log --pretty=oneline -n 20 ----abbrev-commit
+
+  # View history graph of the latest 20 commits
+  graph = log -n 20 --graph --pretty=custom
 
   # View the current working tree status using the short format
   s = status -s
@@ -15,7 +18,10 @@
   rlc = reset --hard HEAD~1
 
   # Undo last commit
-  ulc = reset --soft HEAD~1
+  undo = reset --soft HEAD~1
+
+  # Remove last commit
+  remove = reset --hard HEAD~1
 
   # Show verbose output about branches, tags, or remotes
   branches = branch -a
@@ -79,9 +85,12 @@
   new = green         # additions
 
 [color "status"]
-  added = green reverse
-  changed = yellow reverse
-  untracked = red reverse
+  added = green
+  changed = yellow
+  untracked = red
+
+[pretty]
+  custom = "%C(magenta)%h%Creset -%C(red)%d %C(green)%s %C(yellow)(%ar) %C(bold blue)<%an>"
 
 [url "git@github.com:"]
   insteadOf = "gh:"
@@ -116,6 +125,16 @@
   # Automatically correct and execute mistyped commands
   autocorrect = 1
 
+[user]
+  # Don't guess the user's identity.
+  # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
+  useConfigOnly = true
+
 [include]
-  # For username/github token/etc
+  # Load local configs.
+  # https://git-scm.com/docs/git-config#_includes
+  #
+  # [!] The following needs to remain at the end of this file in
+  #     order to allow any of the above configs to be overwritten
+  #     by the local ones
   path = ~/.gitconfig.local
