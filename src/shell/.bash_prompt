@@ -94,8 +94,8 @@ set_prompts() {
   export PS1
 
   # PS2 - Continuation interactive prompt
-  # PS2="⚡ "
-  PS2="\[$orange\]→ \[$reset\]"
+  # PS2="\[$orange\]→ \[$reset\]"
+  PS2="⚡ "
   export PS2
 
 
