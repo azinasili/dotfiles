@@ -1,9 +1,9 @@
 [alias]
   # View abbreviated SHA and description of the latest 20 commits
-  l = log --pretty=oneline -n 20 ----abbrev-commit
+  l = log --oneline -n 20
 
   # View history graph of the latest 20 commits
-  graph = log -n 20 --graph --pretty=custom
+  graph = log -n 20 --graph
 
   # List contributors with number of commits
   contributors = shortlog --summary --numbered
