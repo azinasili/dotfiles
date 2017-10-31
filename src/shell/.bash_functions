@@ -120,7 +120,7 @@ datauri() {
 }
 
 # Start an HTTP server from a directory, optionally specifying the port
-server() {
+pyserver() {
   local port="${1:-8000}"
   sleep 1 && open "http://localhost:${port}/" &
   # Set the default Content-Type to `text/plain` instead of `application/octet-stream`
@@ -209,10 +209,8 @@ note() {
   fi
   osascript >/dev/null <<EOF
 tell application "Notes"
-  tell account "iCloud"
-    tell folder "Notes"
-      make new note with properties {name:"$title", body:"$title" & "<br><br>" & "$body"}
-    end tell
+  tell folder "Notes"
+    make new note with properties {name:"$title", body:"$title" & "<br><br>" & "$body"}
   end tell
 end tell
 EOF
