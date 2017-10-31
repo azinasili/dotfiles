@@ -42,7 +42,7 @@
 
 [core]
   # insanely beautiful diffs
-  pager = diff-highlight | diff-so-fancy | less -r
+  # pager = diff-highlight | diff-so-fancy | less -r
 
   # Use custom `.gitignore` and `.gitattributes`
   excludesfile = ~/.gitignore
