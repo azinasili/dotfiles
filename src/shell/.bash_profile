@@ -4,6 +4,7 @@ source_bash_files() {
   declare -r CURRENT_DIRECTORY="$(pwd)"
   declare -r -a FILES_TO_SOURCE=(
     "bash_aliases"
+    "bash_autocomplete"
     "bash_exports"
     "bash_functions"
     "bash_options"
