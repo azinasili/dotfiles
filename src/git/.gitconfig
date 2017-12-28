@@ -84,7 +84,7 @@
   untracked = red
 
 [pretty]
-  custom = "%C(magenta)%h %C(red)%d %C(green)%s - %C(yellow)%ar %C(reset)by %C(blue)%an"
+  custom = "%C(magenta)%h %C(red)%d %C(green)%s %C(reset)- %C(yellow)%ar %C(reset)by %C(blue)%an"
 
 [url "git@github.com:"]
   insteadOf = "gh:"
