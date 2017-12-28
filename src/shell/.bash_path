@@ -9,7 +9,14 @@ export PATH="/usr/local/bin:$PATH"
 # Load NVM into shell
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
+# Load pyenv [Python Version Manager] into shell
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # Load RVM into a shell session *as a function*
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
