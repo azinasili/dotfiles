@@ -1,9 +1,9 @@
 [alias]
   # View abbreviated SHA and description of the latest 20 commits
-  l = log --oneline -n 20
+  l = log -n 20 --pretty=custom
 
   # View history graph of the latest 20 commits
-  graph = log -n 20 --graph --pretty=custom
+  graph = log --graph --pretty=custom
 
   # List contributors with number of commits
   contributors = shortlog --summary --numbered
@@ -84,7 +84,7 @@
   untracked = red
 
 [pretty]
-  custom = "%C(magenta)%h%Creset -%C(red)%d %C(green)%s %C(yellow)(%ar) %C(bold blue)<%an>"
+  custom = "%C(magenta)%h %C(red)%d %C(green)%s - %C(yellow)%ar %C(reset)by %C(blue)%an"
 
 [url "git@github.com:"]
   insteadOf = "gh:"

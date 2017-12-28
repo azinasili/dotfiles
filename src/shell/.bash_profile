@@ -29,7 +29,3 @@ source_bash_files() {
 
 source_bash_files
 unset -f source_bash_files
-
-# Clear system messages (system copyright notice, the date
-# and time of the last login, the message of the day, etc.).
-clear
