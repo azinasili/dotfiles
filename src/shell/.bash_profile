@@ -10,8 +10,9 @@ source_bash_files() {
     "bash_options"
     "bash_path"
     "bash_prompt"
-    "bash.local"  # For local settings that should
-                  # not be under version control.
+    # For local settings that should
+    # not be under version control.   
+    "bash.local"
   )
 
   local file=""
